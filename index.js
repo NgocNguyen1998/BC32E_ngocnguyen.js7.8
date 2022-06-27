@@ -124,7 +124,7 @@ document.getElementById('btnThemSo').onclick = function () {
 
     // ------Bài 8: Tìm số nguyên tố đầu tiên----------
     document.getElementById('btnTimSoNguyen').onclick = function () {
-        var ketQua8 = 'Không có số nguyên tố';
+        var ketQua8 = -1;
         var i = 0;
         while (i < arrNumber.length) {
             var kiemTra = kiemTraSoNT(arrNumber[i])
@@ -134,7 +134,7 @@ document.getElementById('btnThemSo').onclick = function () {
                 ketQua8 = arrNumber[i - 1]
                 break;
             } else if (kiemTra == false) {
-                ketQua8 = 'Không có số nguyên tố'
+                ketQua8 = -1
             }
         }
         document.getElementById('ketQua_b8').innerHTML = ketQua8;
