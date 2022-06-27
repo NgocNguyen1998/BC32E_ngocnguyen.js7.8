@@ -1,0 +1,165 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>EXJS7.8</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+    integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+  <body>
+    <div class="container mt-2">
+        <h3>
+          Cho người dùng nhập vào số nguyên và lưu trữ trong mảng. Thiết kế layout
+          cho người dùng chọn thực hiện các chức năng bên dưới:
+        </h3>
+        <div class="row">
+          <div class="col-4">
+            <input type="number" class="form-control mt-2" id="themSo" />
+          </div>
+          <div class="col-4">
+            <button class="btn btn-success mt-2" id="btnThemSo">Thêm số</button>
+          </div>
+        </div>
+        <div class="alert alert-success mt-3 col-6"  id="ketQua"></div>
+        <br>
+        <p>Vị trí trong dãy số:</p>
+        <div class="alert alert-success mt-3 col-6" style="color:red;" id="ketQua1"></div>
+        <hr />
+        <br>
+        <div class="alert alert-primary col-3">
+          <p>Bài 1: Tổng số dương</p>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-success mt-2" id="btnTinhTong">Tính Tổng</button>
+        </div>
+        <div class="alert alert-success col-4" id="ketQua_b1"></div>
+        <hr>
+        <br>
+        <div class="alert alert-primary col-3">
+          <p>Bài 2: Đếm số dương</p>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-success mt-2" id="btnDemSo">Đếm Số</button>
+        </div>
+        <div class="alert alert-success col-4" id="ketQua_b2"></div>
+        <hr>
+        <br>
+        <div class="alert alert-primary col-3">
+          <p>Bài 3: Tìm số nhỏ nhất</p>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-success mt-2" id="btnTimSoNhoNhat">
+            Tìm số nhỏ nhất
+          </button>
+        </div>
+        <div class="alert alert-success col-4" id="ketQua_b3"></div>
+        <hr>
+        <br>
+        <div class="alert alert-primary col-3">
+          <p>Bài 4: Tìm số dương nhỏ nhất</p>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-success mt-2" id="btnTimSoDuongNhoNhat">
+            Tìm số dương nhỏ nhất
+          </button>
+        </div>
+        <div class="alert alert-success col-4" id="ketQua_b4"></div>
+        <hr>
+        <br>
+        <div class="alert alert-primary col-3">
+          <p>Bài 5: Tìm số chẵn cuối cùng</p>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-success mt-2" id="btnSoChan">
+            Tìm số chẵn cuối cùng
+          </button>
+        </div>
+        <div class="alert alert-success col-4" id="ketQua_b5"></div>
+        <hr>
+        <br>
+        <div class="alert alert-primary col-3">
+          <p>Bài 6: Đổi chỗ</p>
+        </div>
+        <div class="form-group row">
+            <div class="col-4">
+                <input id="nhapViTri1" class="form-control" placeholder="Nhập vị trí thứ 1"type="number" />
+            </div>
+            <div class="col-4">
+                <input id="nhapViTri2" class="form-control" placeholder="Nhập vị trí thứ 2" type="number" />
+            </div>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-success mt-2" id="btnDoiCho">Đổi chỗ</button>
+        </div>
+        
+        <div class="alert alert-success col-4" id="ketQua_b6"></div>
+        <hr>
+        <br>
+        <div class="alert alert-primary col-3">
+          <p>Bài 7: Sắp xếp tăng dần</p>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-success mt-2" id="btnSapXep">
+            Sắp xếp tăng dần
+          </button>
+        </div>
+        <div class="alert alert-success col-4" id="ketQua_b7"></div>
+        <hr>
+        <br>
+        <div class="alert alert-primary col-3">
+          <p>Bài 8: Tìm số nguyên tố đầu tiên</p>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-success mt-2" id="btnTimSoNguyen">
+            Tìm số nguyên tố đầu tiên
+          </button>
+        </div>
+        <div class="alert alert-success col-4" id="ketQua_b8"></div>
+        <hr>
+        <br>
+        <div class="alert alert-primary col-3">
+          <p>Bài 9: Đếm số nguyên</p>
+        </div>
+        <div class="form-group row">
+            <div class="col-4">
+                <input id="nhapSo" class="form-control" placeholder="Nhập số n"type="number" />
+            </div>
+            <div class="col-4">
+                <button class="btn btn-success" id="btnThemSo_b9">
+                   Thêm số
+                  </button>
+            </div>
+            
+        </div>
+        <div class="alert alert-success col-4" id="ketQua_b91"></div>
+        <div class="form-group">
+          <button class="btn btn-success mt-2" id="btnDemSoNguyen">
+            Đếm số nguyên
+          </button>
+        </div>
+        <div class="alert alert-success col-4" id="ketQua_b92"></div>
+        <hr>
+        <br>
+        <div class="alert alert-primary col-3">
+          <p>Bài 10: So sánh số lượng số dương và số âm</p>
+        </div>
+        <div class="form-group">
+          <button class="btn btn-success mt-2" id="btnSoSanh">So sánh</button>
+        </div>
+        <div class="alert alert-success col-4" id="ketQua_b10"></div>
+      </div>
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="./index.js"></script>
+</body>
+</html>
