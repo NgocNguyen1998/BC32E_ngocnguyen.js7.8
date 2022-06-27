@@ -131,7 +131,7 @@ document.getElementById('btnThemSo').onclick = function () {
             i++;
             ketQua8 = arrNumber[i]
             if (kiemTra == true) {
-                ketQua8 = arrNumber[i-1]
+                ketQua8 = arrNumber[i - 1]
                 break;
             } else if (kiemTra == false) {
                 ketQua8 = 'Không có số nguyên tố'
@@ -139,14 +139,52 @@ document.getElementById('btnThemSo').onclick = function () {
         }
         document.getElementById('ketQua_b8').innerHTML = ketQua8;
     }
-
-
-
-
-
-
-
 }
+// ------Bài 9: Đếm số nguyên----------
+var arrNumber1 = [];
+document.getElementById('btnThemSo_b9').onclick = function () {
+    var nhapSo_9 = +document.getElementById('nhapSo_9').value;
+    arrNumber1.push(nhapSo_9);
+    var ketQua_b91 = arrNumber1;
+    document.getElementById('ketQua_b91').innerHTML = ketQua_b91;
+    document.getElementById('btnDemSoNguyen').onclick = function () {
+        var demSo = 0;
+        for (var index = 0; index < arrNumber1.length; index++) {
+            if (Number.isInteger(arrNumber1[index])) {
+                demSo += 1
+            }
+        }
+        document.getElementById('ketQua_b92').innerHTML = demSo;
+    }
+}
+
+// ------Bài 10: So sánh số lượng số dương và số âm----------
+document.getElementById('btnSoSanh').onclick = function () {
+    var demSoDuong = 0;
+    var demSoAm = 0;
+    var ketQuaSoSanh = '';
+    for (var index = 0; index < arrNumber.length; index++) {
+        if (arrNumber[index] > 0) {
+            demSoDuong += 1
+
+        } else if (arrNumber[index] < 0) {
+            demSoAm += 1
+        }
+
+    }
+    if (demSoDuong - demSoAm > 0) {
+        ketQuaSoSanh = 'Số dương > Số âm'
+    } else if (demSoDuong - demSoAm == 0) {
+        ketQuaSoSanh = 'Số dương = Số âm'
+    } else if (demSoDuong - demSoAm < 0) {
+        ketQuaSoSanh = 'Số dương < Số âm'
+    }
+    document.getElementById('ketQua_b10').innerHTML = ketQuaSoSanh;
+}
+
+
+
+
 
 function kiemTraSoNT(number) {
     var check = true;
