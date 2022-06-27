@@ -157,7 +157,6 @@ document.getElementById('btnThemSo_b9').onclick = function () {
         document.getElementById('ketQua_b92').innerHTML = demSo;
     }
 }
-
 // ------Bài 10: So sánh số lượng số dương và số âm----------
 document.getElementById('btnSoSanh').onclick = function () {
     var demSoDuong = 0;
@@ -181,10 +180,6 @@ document.getElementById('btnSoSanh').onclick = function () {
     }
     document.getElementById('ketQua_b10').innerHTML = ketQuaSoSanh;
 }
-
-
-
-
 
 function kiemTraSoNT(number) {
     var check = true;
