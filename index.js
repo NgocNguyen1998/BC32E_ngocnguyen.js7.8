@@ -76,7 +76,7 @@ document.getElementById('btnThemSo').onclick = function () {
 
     // ------Bài 5: Tìm số số chẵn cuối cùng----------
     document.getElementById('btnSoChan').onclick = function () {
-        var ketQua = 'Không có số chẵn';
+        var ketQua = -1;
         for (var index = arrNumber.length - 1; 0 <= index; index--) {
             if (arrNumber[index] % 2 === 0) {
                 ketQua = arrNumber[index];
@@ -106,7 +106,7 @@ document.getElementById('btnThemSo').onclick = function () {
     }
     // ------Bài 7: Xếp tăng dần----------
     document.getElementById('btnSapXep').onclick = function () {
-        // arrNumber.sort(function timSo(a, b) {return a - b })
+        // arrNumber.sort(function(a, b) {return a - b })
         ketQua = arrNumber;
         // document.getElementById('ketQua_b7').innerHTML = ketQua
         for (var index = 0; index < arrNumber.length - 1; index++) {
@@ -128,14 +128,13 @@ document.getElementById('btnThemSo').onclick = function () {
         var i = 0;
         while (i < arrNumber.length) {
             var kiemTra = kiemTraSoNT(arrNumber[i])
-            i++;
-            ketQua8 = arrNumber[i]
             if (kiemTra == true) {
-                ketQua8 = arrNumber[i - 1]
+                ketQua8 = arrNumber[i]
                 break;
             } else if (kiemTra == false) {
                 ketQua8 = -1
             }
+            i++;
         }
         document.getElementById('ketQua_b8').innerHTML = ketQua8;
     }
